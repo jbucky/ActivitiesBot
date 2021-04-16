@@ -32,6 +32,10 @@ slash.commands.all().then((e) => {
   if (e.size !== 2) {
     slash.commands.bulkEdit([
       {
+        name: "invite",
+        description: "Invite me to your server.",
+      },
+      {
         name: "activity",
         description: "Start an Activity in a Voice Channel.",
         options: [
@@ -91,7 +95,7 @@ slash.handle("activity", (d) => {
 
 slash.handle("invite", (d) => {
   d.reply(
-    `• [Click here to invite.](<https://discord.com/oauth2/authorize?client_id=830862236581888000&permissions=8&scope=bot%20applications.commands>)\n` ;
+    `• [Click here to invite.](<https://discord.com/api/oauth2/authorize?client_id=819835984388030464&permissions=1&scope=applications.commands%20bot>)\n` ,
     { ephemeral: true }
   );
 });
